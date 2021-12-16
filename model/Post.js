@@ -1,6 +1,9 @@
+
 const MongoClient = require('mongodb').MongoClient;
 
+
 module.exports = class Post {
+
     static async find(busca) {        
         const conn = await MongoClient.connect('mongodb://127.0.0.1:27017/netflixdb'),
                 db = conn.db();  
@@ -22,4 +25,9 @@ module.exports = class Post {
         console.log(content);
 
     }
+
+  
+
 }
+
+
