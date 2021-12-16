@@ -7,11 +7,13 @@
     <link rel="shortcut icon" href="./img/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <title>Posts</title>
+    <title>Post</title>
 
 </head>
 
-<body>
+<body>    
+    
+
     <div class="mid2">
     <div class="mid-container">
 
@@ -31,40 +33,10 @@
         </div>
       </div>
 
-    <div class="post">
-        <h1>Posts</h1> 
-        <a href="/postsImagens" class="botaum" >» Postar Imagens...</a>  
-    <div class="conteudos">
-        <form  action="posts" method="post" accept-charset="utf-8">  
-        <label for="content">Conteúdo</label>  
-        <input type="text" name = "content" value=""/>            
-        <input type="submit"  value="Adicionar &rarr;"/>
-
-    </form> 
-    
-    <form action="posts" method="get" accept-charset="utf-8">  
-        <label for="busca">Busca</label>
-        <input type="text" name = "busca" value=""/>
-        <input type="submit"  value="busca....">
-
-    </form>     
-
-
+    <div class="post"> 
+    <a href="/postsImagens" class="botaum" >» Postar Imagem...</a>  
+    <a href="/posts" class="botaum" >» Postar Texto...</a> 
     </div>
-       
-
-
-
-    <ul>
-        {{#posts}}
-         <li>{{content}}</li>
-        {{/posts}}
-    </ul>  
-
-    </div>
-
-
-
     
 </body>
 

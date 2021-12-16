@@ -31,38 +31,40 @@
         </div>
       </div>
 
-    <div class="post">
-        <h1>Posts</h1> 
-        <a href="/postsImagens" class="botaum" >» Postar Imagens...</a>  
-    <div class="conteudos">
-        <form  action="posts" method="post" accept-charset="utf-8">  
-        <label for="content">Conteúdo</label>  
-        <input type="text" name = "content" value=""/>            
-        <input type="submit"  value="Adicionar &rarr;"/>
-
-    </form> 
     
-    <form action="posts" method="get" accept-charset="utf-8">  
+     
+<div class="postImagens">
+    <h1>Posts Imagens</h1>   
+    <a href="/posts" class="botaum" >» Postar Texto...</a> <br>
+
+    <span style="color:red;">{{messages}}</span> <br>
+    <div class="conteudos">
+        <form  action="/postsImagens" method="post" enctype="multipart/form-data">
+        
+        <label for="content">Conteúdo</label>  <br>
+        <input type="file" name="image" value="Upload Image"/>            
+        <input type="submit"  value="Adicionar file &rarr;"/>
+
+    </form>  
+
+    <br>  
+    <form action="/postsImagens" method="get" enctype="multipart/form-data">  
         <label for="busca">Busca</label>
         <input type="text" name = "busca" value=""/>
         <input type="submit"  value="busca....">
 
-    </form>     
-
-
+    </form>      
     </div>
+    
        
-
-
-
     <ul>
-        {{#posts}}
-         <li>{{content}}</li>
-        {{/posts}}
+        {{#postsImagens}}
+         <li style="list-style:none; margin-bottom:5px; background:rgb(30 30 30 / 80%);"><a style="display:flex; justify-content: left;
+  align-items: center; color:#FFF;" href="/upload/users/{{image}}" title="{{image}}" target="_blank"><img  src="/upload/users/{{image}}" style="max-width:150px; margin-right:15px;"> {{image}}</a></li>
+        {{/postsImagens}}
     </ul>  
 
     </div>
-
 
 
     
